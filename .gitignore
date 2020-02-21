@@ -3,4 +3,5 @@
 *env/*
 .vscode
 .idea/encodings.xml
+conf.ini
 downloadedVideos.txt
