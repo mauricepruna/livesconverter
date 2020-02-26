@@ -8,6 +8,7 @@ Tool to download youtube videos from a channel
 - Run the following command `pip install -r requirements.txt` after previous installations are finished
 - Modify Config file with proper parameters
 - Run `git clone https://github.com/mauricepruna/youtube-video-audio-conversor.git`
+
 **Example**
 ```properties
 [DEFAULT]
