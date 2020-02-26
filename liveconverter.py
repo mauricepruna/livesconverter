@@ -24,9 +24,10 @@ if __name__ == '__main__':
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
-                'preferredquality': quality,
+                'preferredquality': quality
             }],
-            'outtmpl': './download/%(title)s.%(ext)s',
+            'ignoreerrors':"True",
+            'outtmpl': './download/%(title)s-{}.%(ext)s'.format(today),
             'download_archive' : 'downloadedVideos.txt',
             'daterange': DateRange(dateafter, datebefore),
             'playlistend': 10
