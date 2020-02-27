@@ -11,7 +11,7 @@ Tool to download youtube videos from a channel
 
 **Example**
 ```properties
-[DEFAULT]
+[channel_name]
 youtube_channel_url = https://www.youtube.com/channel/{CHANNEL_ID}/video
 number_days = 1
 quality = 128
