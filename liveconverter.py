@@ -27,7 +27,7 @@ if __name__ == '__main__':
                 'preferredquality': quality
             }],
             'ignoreerrors':"True",
-            'outtmpl': './download/%(title)s-{}.%(ext)s'.format(today),
+            'outtmpl': './download/%(title)s-%(upload_date)s.%(ext)s',
             'download_archive' : 'downloadedVideos.txt',
             'daterange': DateRange(dateafter, datebefore),
             'playlistend': 10
