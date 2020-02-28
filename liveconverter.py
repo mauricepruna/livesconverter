@@ -32,6 +32,7 @@ if __name__ == '__main__':
                 }],
                 'ignoreerrors':"True",
                 'outtmpl': './download/%(uploader)s-%(title)s-%(upload_date)s.%(ext)s',
+                'restrictfilenames':"True",
                 'download_archive' : 'downloadedVideos.txt',
                 'daterange': DateRange(dateafter, datebefore),
                 'playlistend': 10

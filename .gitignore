@@ -5,3 +5,4 @@
 .vscode
 .idea/encodings.xml
 downloadedVideos.txt
+.DS_Store
