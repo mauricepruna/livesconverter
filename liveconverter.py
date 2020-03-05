@@ -1,11 +1,11 @@
+import os, shutil
 import sys
 import configparser
 from youtube_dl import YoutubeDL, DateRange
 from datetime import date, timedelta
 
 
-if __name__ == '__main__':
-
+def youtube_converter():
     config = configparser.ConfigParser()
     config.read('conf.ini')
     channels = config.sections()
@@ -44,3 +44,21 @@ if __name__ == '__main__':
         else:
             print("Missing one of the configurations needed:\n channel:{channel} url:{url} days:{days} quality:{qual} ".format(channel=channel, url=channels, days=number_of_days, qual=quality))
             exit(0)
+
+def folder_cleaner():
+    folder = './download'
+    for filename in os.listdir(folder):
+        file_path = os.path.join(folder, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
+if __name__ == '__main__':
+
+    folder_cleaner()
+    youtube_converter()
+
+    
