@@ -6,3 +6,4 @@
 .idea/encodings.xml
 downloadedVideos.txt
 .DS_Store
+env.sh

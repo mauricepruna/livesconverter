@@ -20,3 +20,14 @@ quality = 128
 ## Run
 - `python liveconverter.py`
 
+
+## Schedule
+
+If you want to create a scheduled execution using a cron job performing `crontab -e` insert similar line to the following: 
+
+Ex. 
+```
+0 12 * * * cd ~/workspace/youtube-video-audio-conversor && python liveconverter.py && ./bucket_upload.sh
+```
+
+previous example will run an execution every day at noon. check logs for completion with `grep CRON /var/log/syslog`   
